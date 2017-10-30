@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>onclick</title>
+<script src="http://www.w3school.com.cn/jquery/jquery-1.11.1.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $("#b1").click(function(){
+  $("p").hide(1000);
+  });
+  $("#b2").click(function(){
+  $("p").show(1000);
+  });
+});
+</script>
+</head>
+<body>
+<button type="button" id="b1">隐藏</button>
+<button type="button" id="b2">显示</button>
+<p>这是一个段落。</p>
+<p>这是另一个段落。</p>
+</body>
+</html>
