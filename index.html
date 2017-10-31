@@ -2,7 +2,7 @@
     <head>
         <title>黄文禹的个人主页</title>
         <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
-        <meta http-equiv="refresh" content="3;h007catalogue.html">
+        <meta http-equiv="refresh" content="20;h007catalogue.html">
         <meta name="Description" content="黄文禹的个人主页">
         <meta name="Keywords" content="黄文禹，个人主页，哈工大，四川">
         <style type="text/css">
@@ -12,13 +12,17 @@
     </head>
 
     <body>
-        <a href="http://www.baidu.com" target="_blank">
-        	<img src="image/welcome.jpg" 
-        	width="100%" 
-        	height="100%" 
-        	title="welcome" 
-        	alt="显示图片失败">
+
+        <a href="http://www.baidu.com" target="_blank" id="win">
+            <img src="image/welcome.jpg">
         </a>
+        <script>
+            var w=window.innerWidth;
+            var h=window.innerHeight;
+            x=document.getElementById("win");
+            x.innerWidth=w;
+            x.innerHeight=h;
+        </script>
         
         
     </body>
