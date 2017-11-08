@@ -1,0 +1,41 @@
+body{
+ /*清除边界空白部分*/
+    margin:0;
+    padding: 0;
+    max-width:720px;
+    min-width:320px;
+    margin:0 auto;
+         }
+.case{
+    background-color:#68CDD5;
+    height:100%;
+}
+.arrows{
+    margin-left: 1%;
+    padding-top: 1%;
+}
+.logo{
+    text-align: center;
+}
+.text{
+	padding:18%;
+	color:#FFF;
+}
+.bottom{
+    text-align: center;	
+}
+.images{
+	padding-bottom:8%;
+}
+.left{
+    float: left;
+    margin-left: 15%;
+    padding-bottom:8%;
+    color:#FFF;
+}
+.right{
+	float:right;
+	margin-right:15%;
+	padding-bottom:8%;
+	color:#FFF;
+}
