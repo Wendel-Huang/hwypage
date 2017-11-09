@@ -8,25 +8,79 @@
       /*清除边界空白部分*/
       margin:0;
       padding: 0;
-      max-width:720px;
-      min-width:320px;
+      background: #eff0f4;
       }
+
+
       .mhead{
       background-color:#68CDD5;
-      height:8%;
+      height:36px;
+      line-height: 36px;
       color: white;
       font-size: 20px;
+      padding:6px 3px;
       }
       .mleft{
         float: left;
-        margin: 3%;
       }
       .mright{
         float: right;
-        margin: 3%;
       }
       .mcenter{
-        margin: 3% 35%;
+        text-align: center;
+      }
+
+
+
+      .mmain{
+        height: 140px;
+      }
+      .minput{
+        height: 50px;
+        margin:5px 0;
+        background-color: white;
+      }
+      
+
+      a{
+        text-decoration: none;
+        color: white;
+        cursor: pointer;
+      }
+
+      h2{
+        margin: 0;
+      }
+
+      input{
+        width: 100%;
+        padding-left: 80px;
+        line-height: 50px;
+        border: 0;
+        outline: none;/*点击时出现*/
+      }
+
+      input[type=text]{
+        background: url("image/icon_mobile.png") no-repeat;
+        background-size: 65px 50px;
+      }
+
+      input[type=password]{
+        background: url("image/icon_pwd.png") no-repeat;
+        background-size: 65px 50px;
+      }
+
+      /*button样式*/
+      .mybtn{
+        border: none;
+        cursor: pointer;
+        outline: none; /*点击时出现*/
+        width: 100%;
+        height: 50px;
+        background-color:#68CDD5 ;
+        line-height: 50px;
+        color: white;
+        font-size: 20px;
       }
 
     </style>
@@ -34,9 +88,27 @@
 
     <body>
       <div class="mhead">
-        <div class="mleft">注册</div>
-        <div class="mright">关闭</div>
-        <div class="mcenter">登录</div>
+        <a class="mleft" href="www.baidu.com">注册</a>
+        <a class="mright" href="www.baidu.com">关闭</a>
+        <h2 class="mcenter">登录</h2>
       </div>
+
+      <div class="mmain">
+        <form>
+          <div class="minput">
+            <input type="text" name="firstname">
+          </div>
+          <div class="minput">
+            <input type="password" name="lastname">
+          </div>
+
+          <button class="mybtn">登录</button>
+          
+          
+        </form>
+      </div>
+
+      
+
     </body>
 </html>
