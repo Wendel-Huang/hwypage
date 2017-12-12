@@ -1,0 +1,92 @@
+header{
+	position: fixed;
+	height: 40px;
+	width: 100%;
+	background-color: #00BBFF;
+	z-index: 100;
+}
+
+.threebar{
+	width: 17px;
+	height: 14px;
+	background-image: url(image/h017/icon-bar.png);
+	margin: 12px;
+}
+
+.maindiv{
+	width: 100%;
+	height: 1000px;
+	padding-top: 40px;
+	background-color: #EEE;
+	z-index: 99;
+}
+
+.mybtn{
+	width: 90%;
+	height: 80px;
+	margin: 5%;/*居中用百分比*/
+	margin-top: 10px;
+}
+.backicon{
+	float: right;
+}
+
+.table{
+	width: 90%;
+	height: 500px;
+	margin: 5%;
+	background-color: white;
+	border: 1px solid #aaa;
+	/*使下面的triangle相对于此绝对定位*/
+	position: relative;
+}
+.table1{
+	height: 50px;
+	font-size: 30px;
+	border-bottom: 1px solid #EEAA00;
+	text-align: center;
+	color: #EEAA00;
+}
+.mybtn2{
+	/*宽度，位置控制*/
+	width: 80%;
+	height: 80px;
+	margin: 10%;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	/*按钮背景颜色*/
+	background-color: #00BBFF;
+	/*文字颜色*/
+	color: white;
+	/*文字*/
+	font-size: 25px;
+}
+.myp{
+	text-align: center;
+	color: blue;
+}
+
+
+.controller {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 1.9rem;
+}
+.pointer {
+	background-color: #f0f0f0;
+	width: 0.9rem;
+	height: 0.9rem;
+	border-radius: 100px;
+	margin-left: 0.5rem;
+}
+.pointer.active {
+	background-color:#69d1e9;
+}
+
+
+.nextpage{
+	position: absolute;
+	top: 50%;
+	right: 5px;
+}
