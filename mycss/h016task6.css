@@ -1,0 +1,131 @@
+header{
+	position: fixed;
+	margin: 0;
+	background-color: #70CCDD;
+	height: 50px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 100;
+}
+.mylocation{
+	width: 24px;
+	height: 24px;
+	position: absolute;
+	top: 12px;
+	right: 12px;
+	background-image: url("../image/sprite2.png");
+}
+
+		
+.container{
+	padding: 50px 15px 0 15px;
+	z-index: 99;
+}
+
+/*solid的意义*/
+.list-group-item{
+	border: none;
+	border-bottom: 2px solid #ccc;
+}
+
+.list-group-item-title{
+	display: flex;
+	align-content: center;
+	font-size: 10px;
+	color: #999;
+}
+
+.dateicon{
+	width: 14px;
+	height: 14px;
+	background-image: url("../image/sprite2.png");
+	background-size: cover;
+	background-position: -38px 0;
+}
+
+.placeicon{
+	width: 14px;
+	height: 14px;
+	background-image: url("../image/sprite2.png");
+	background-size: cover;
+	background-position: -19px 0;
+}
+
+/*设置左浮动，添加省略功能*/
+.mleft{
+	color: #333;
+
+	font-weight: bold;
+	margin-right: 12rem;
+	text-overflow:ellipsis; white-space:nowrap; overflow:hidden;
+}
+.mright{
+	position: absolute;
+	right: 0;
+}
+/*flex使此类的块下面的块位于同一行*/
+.floatdiv{
+	display: flex;
+	height: 20px;
+	width: 100%;
+}
+
+
+footer{
+	position: fixed;
+	bottom: 0;
+	height: 50px;
+	width: 100%;
+	padding: 0 50px 0 50px;
+	background-color: #E9ECFD;
+}
+
+.home{
+	width: 50px;
+	height: 50px;
+	float: left;
+}
+.homeimg{
+	background-image: url(../image/sprite2.png);
+	width: 24px;
+	height: 24px; 
+	background-size: cover;
+	background-position: -148px 0;
+}
+
+.write{
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	left: 135px;/*居中不能这么用*/
+}
+.writeimg{
+	width: 50px;
+	height: 50px;
+	border-radius: 50px;
+	background-color: #5fc0cd;
+	background-image: url(../image/sprite2.png);
+	background-size: 300px 40px;
+	background-position: -150px 5px;
+}
+
+
+.mine{
+	width: 50px;
+	height: 50px;
+	float: right;
+}
+.mineimg{
+	background-image: url(../image/sprite2.png);
+	width: 24px;
+	height: 24px; 
+	background-size: cover;
+	background-position: -120px 0;
+}
+
+
+
+
+
