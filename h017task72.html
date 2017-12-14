@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>投票页</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1.0,maximum-scale=1.0" /><!-- 设置窗口宽度等于设备宽度 -->
+	<script src="bootstrap/js/jquery/2.0.0/jquery.min.js"></script>
+	<link href="bootstrap/css/bootstrap/3.3.6/bootstrap.min.css" rel="stylesheet">
+	<script src="bootstrap/js/bootstrap/3.3.6/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="h017css.css">
+</head>
+<body>
+	<header>
+		<div class="barborder"></div>
+		<div class="absolutecenter">投票</div>
+		<div class="absoluterights"></div>
+	</header>
+
+	<div class="maindiv2">
+		<div class="lightblue">
+			<div class="audiotext">发言讨论结束，大家请投票</div>
+			<a href="javascript:void(0);" onclick="toggleAudio()"><div class="audioicon"></div></a>
+			<audio id="myAudio" src="audio/BloodCastle.mp3"></audio>
+			<div class="from"></div>
+			<div class="outertext">点击得票最多人的头像</div>
+		</div>
+
+		<div class="allhouse">
+			<div class="none"></div>
+			<a href="#" class="onehouse">
+				<div class="namediv">村民</div>
+				<div class="numberdiv">1号</div>
+				<div class="operation">
+							<div>
+								<img src="image/h017/kill.png">
+							</div>
+							<div>
+								<img src="image/h017/magnifier.png">
+							</div>
+							<div>
+								<img src="image/h017/target.png">
+							</div>
+							<div>
+								<img src="image/h017/cure.png">
+							</div>
+				</div>
+			</a>
+			<a href="#" class="onehouse">
+				<div class="namediv">村民</div>
+				<div class="numberdiv">2号</div>
+				<div class="operation">
+							<div>
+								<img src="image/h017/kill.png">
+							</div>
+							<div>
+								<img src="image/h017/magnifier.png">
+							</div>
+							<div>
+								<img src="image/h017/target.png">
+							</div>
+							<div>
+								<img src="image/h017/cure.png">
+							</div>
+				</div>
+			</a>
+			<a href="#" class="onehouse">
+				<div class="namediv">村民</div>
+				<div class="numberdiv">3号</div>
+				<div class="operation">
+							<div>
+								<img src="image/h017/kill.png">
+							</div>
+							<div>
+								<img src="image/h017/magnifier.png">
+							</div>
+							<div>
+								<img src="image/h017/target.png">
+							</div>
+							<div>
+								<img src="image/h017/cure.png">
+							</div>
+				</div>
+			</a>
+			<a href="#" class="onehouse">
+				<div class="namediv">预言家</div>
+				<div class="numberdiv">4号</div>
+				<div class="operation">
+							<div>
+								<img src="image/h017/kill.png">
+							</div>
+							<div>
+								<img src="image/h017/magnifier.png">
+							</div>
+							<div>
+								<img src="image/h017/target.png">
+							</div>
+							<div>
+								<img src="image/h017/cure.png">
+							</div>
+				</div>
+			</a>
+			<a href="#" class="onehouse">
+				<div class="namediv">狼人</div>
+				<div class="numberdiv">5号</div>
+				<div class="operation">
+							<div>
+								<img src="image/h017/kill.png">
+							</div>
+							<div>
+								<img src="image/h017/magnifier.png">
+							</div>
+							<div>
+								<img src="image/h017/target.png">
+							</div>
+							<div>
+								<img src="image/h017/cure.png">
+							</div>
+				</div>
+			</a>
+			<a href="#" class="onehouse">
+				<div class="namediv">女巫</div>
+				<div class="numberdiv">6号</div>
+				<div class="operation">
+							<div>
+								<img src="image/h017/kill.png">
+							</div>
+							<div>
+								<img src="image/h017/magnifier.png">
+							</div>
+							<div>
+								<img src="image/h017/target.png">
+							</div>
+							<div>
+								<img src="image/h017/cure.png">
+							</div>
+				</div>
+			</a>
+			<a href="#" class="onehouse">
+				<div class="namediv">狼人</div>
+				<div class="numberdiv">7号</div>
+				<div class="operation">
+							<div>
+								<img src="image/h017/kill.png">
+							</div>
+							<div>
+								<img src="image/h017/magnifier.png">
+							</div>
+							<div>
+								<img src="image/h017/target.png">
+							</div>
+							<div>
+								<img src="image/h017/cure.png">
+							</div>
+				</div>
+			</a>
+			<a href="#" class="onehouse">
+				<div class="namediv">猎人</div>
+				<div class="numberdiv">8号</div>
+				<div class="operation">
+							<div>
+								<img src="image/h017/kill.png">
+							</div>
+							<div>
+								<img src="image/h017/magnifier.png">
+							</div>
+							<div>
+								<img src="image/h017/target.png">
+							</div>
+							<div>
+								<img src="image/h017/cure.png">
+							</div>
+				</div>
+			</a>
+			<a href="#" class="onehouse">
+				<div class="namediv">村民</div>
+				<div class="numberdiv">9号</div>
+				<div class="operation">
+							<div>
+								<img src="image/h017/kill.png">
+							</div>
+							<div>
+								<img src="image/h017/magnifier.png">
+							</div>
+							<div>
+								<img src="image/h017/target.png">
+							</div>
+							<div>
+								<img src="image/h017/cure.png">
+							</div>
+				</div>
+			</a>
+			<a href="#" class="onehouse">
+				<div class="namediv">狼人</div>
+				<div class="numberdiv">10号</div>
+				<div class="operation">
+							<div>
+								<img src="image/h017/kill.png">
+							</div>
+							<div>
+								<img src="image/h017/magnifier.png">
+							</div>
+							<div>
+								<img src="image/h017/target.png">
+							</div>
+							<div>
+								<img src="image/h017/cure.png">
+							</div>
+				</div>
+			</a>
+			<a href="#" class="onehouse">
+				<div class="namediv">爱神</div>
+				<div class="numberdiv">11号</div>
+				<div class="operation">
+							<div>
+								<img src="image/h017/kill.png">
+							</div>
+							<div>
+								<img src="image/h017/magnifier.png">
+							</div>
+							<div>
+								<img src="image/h017/target.png">
+							</div>
+							<div>
+								<img src="image/h017/cure.png">
+							</div>
+				</div>
+			</a>
+			<a href="#" class="onehouse">
+				<div class="namediv">狼人</div>
+				<div class="numberdiv">12号</div>
+				<div class="operation">
+							<div>
+								<img src="image/h017/kill.png">
+							</div>
+							<div>
+								<img src="image/h017/magnifier.png">
+							</div>
+							<div>
+								<img src="image/h017/target.png">
+							</div>
+							<div>
+								<img src="image/h017/cure.png">
+							</div>
+				</div>
+			</a>
+		</div>
+
+	</div>
+
+	<footer>
+		<a href="h017task73.html">投死</a>
+	</footer>
+
+
+
+	<script>
+		var x = document.getElementById("myAudio"); 
+		var play = true;
+		function toggleAudio(){
+			if(!play){
+				x.play();
+				play=true;
+			}else{
+				x.pause();
+				play=false;
+			}
+		}
+	</script>
+
+</body>
+</html>
