@@ -1,0 +1,28 @@
+border: 1px solid #aaa;
+border: 1px dashed #aaa;
+border-radius: 100px;
+/*使下面的triangle相对于此绝对定位*/
+	position: relative;
+	text-align: center;/*文字相对于块居中*/
+	font-size: 25px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+z-index: 99;
+
+line-height: 50px;
+vertical-align: middle;
+
+background-size: cover;
+
+display: inline-block;
+
+width: 22vw;
+height: 22vw;/*使高也等于屏幕宽的22%*/
+
+opacity: 0;
+.onehouse:hover .operation {
+	opacity: 1;
+}
