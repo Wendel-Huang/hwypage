@@ -6,6 +6,22 @@
 	
 </head>
 <body>
+	<h1>The stuff you may want to buy.</h1>
+	<p title="A gentle reminder">The list</p>
+	<ul id="myul"> 
+		<li><a href="image/h018/hero1.jpg" onclick="onclickFun(this);return false;">hero1</a></li> 
+		<li><a href="image/h018/hero2.jpg" onclick="onclickFun(this);return false;">hero2</a></li> 
+		<li><a href="image/h018/hero3.jpg" onclick="onclickFun(this);return false;">hero3</a></li> 
+		<li><a href="image/h018/hero4.jpg" onclick="onclickFun(this);return false;">hero4</a></li> 
+	</ul>
+	<img id="placeholder" alt="the image is lost" src="placeholder.jpg" width="1200" height="400"></img>
 
+	<script type="text/javascript">
+		function onclickFun(the_element){
+			var placeholders=document.getElementById("placeholder")
+			var source=the_element.getAttribute("href")
+			placeholder.setAttribute("src",source)
+		}
+	</script>
 </body>
 </html>
