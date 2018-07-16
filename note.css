@@ -27,3 +27,22 @@ opacity: 0;
 	opacity: 1;
 }
 
+var x=document.getElementsByTagName('li')
+		for (var i = x.length - 1; i >= 0; i--) {
+			alert(typeof x[i])
+		}
+
+<img id="placeholder" alt="the image is lost" src="placeholder.jpg" width="1200" height="200"></img>
+window.open(winURL,"popup","width=320,height=160")
+
+
+    var mystr="我是";
+    var mychar="JavaScript";
+    document.write(mystr+"<br>"+"java"+"&nbsp"+"&nbsp"+"&nbsp"+"script");
+
+<meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1.0,maximum-scale=1.0" />
+
+单双引号无区别
+我们以前用的最多的还是使用overflow:hidden来隐藏子元素相对于父元素的超界溢出
+
+？  i flex布局
