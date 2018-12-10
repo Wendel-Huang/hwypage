@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>细胞自动机js版</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<canvas id="can" width='1000' height="1000" style="background-color: white;">对不起，您的浏览器不支持canvas
+	</canvas>
+	<p><b>细胞自动机：</b></p>
+	<p>每个格子，周围有三个活细胞时，此格子中的细胞重生；周围的细胞数少于两个时，饿死；多余三个时，挤死。</p>
+	<p></p>
+	<p><i>本js代码使用canvas绘图，使用setTimeout定时循环</i></p>
+	<p>已执行步数： <b id="step">0</b></p>
+	<p>寻找周期大于二的循环结构,已找到周期为二的次数： <b id="num">0</b></p>
+	<script type="text/javascript">
+		//field存储细胞死活情况
+		var width = document.getElementById('can').offsetWidth;
+		var height = document.getElementById('can').offsetHeight;
+		var numWidth = width/10;
+		var numHeight = height/10;
+		var field;
+		var numHtml=0;
+		var runsteps=0;
+		buffer0Field = mkArray();
+		buffer1Field = mkArray();
+		buffer2Field = mkArray();
+		buffer3Field = mkArray();
+		buffer4Field = mkArray();
+		newfield = mkArray();
+
+		function mkArray(){
+			var theArray = new Array();
+			for(var i=0; i<numWidth; i++){
+				theArray[i] = new Array();
+			}
+			return theArray;
+		}
+		
+		function mkEqual(ar1,ar2){
+			for(var i=0; i<numWidth; i++){
+				for(var j=0; j<numHeight; j++){
+					ar1[i][j]=ar2[i][j];
+				}
+			}
+		}
+
+		function ifEqual(ar1,ar2){
+			var ifequal=1;
+			for(var i=0; i<numWidth; i++){
+				for(var j=0; j<numHeight; j++){
+					if(ar1[i][j]!=ar2[i][j]){
+						ifequal=0;
+					} 
+				}
+			}
+			return ifequal;
+		}
+		
+		function funFirstfield(){
+			field = new Array();
+			for(var i=0; i<numWidth; i++){
+				field[i] = new Array();
+				for(var j=0; j<numHeight; j++){
+					if(Math.random()<0.2){
+						field[i][j]=1;
+					}else{
+						field[i][j]=0;
+					}
+				}
+			}
+			calNewfield();
+		}
+
+
+		function calNewfield(){
+			for(var i=0; i<numWidth; i++){
+				for(var j=0; j<numHeight; j++){
+					var nb_alive=0;
+					for(var k=-1; k<2; k++){
+						for(var l=-1; l<2; l++){
+							r=i+k;
+							c=j+l;
+							if ( r >-1 && r<numWidth && c>-1 && c<numHeight && !(r== i && c == j) ) {
+								nb_alive=nb_alive+field[r][c];
+							}
+						}
+					}
+					if(field[i][j]){
+						if(nb_alive<2||nb_alive>3){
+							newfield[i][j]=0;
+						}else{
+							newfield[i][j]=1;
+						}
+					}else{
+						if(nb_alive==3){
+							newfield[i][j]=1;
+						}else{
+							newfield[i][j]=0;
+						}
+					}
+				}
+			}
+		}
+
+			
+		funFirstfield();
+
+		box = document.getElementById('can').getContext('2d');
+		box.fillStyle='red';
+		for(var i=0; i<numWidth; i++){
+			for(var j=0; j<numHeight; j++){
+				box.strokeRect(i*10,j*10,10,10);
+				if(field[i][j]==1){
+					box.fillRect(i*10+1,j*10+1,9,9)
+				}
+			}
+		}
+
+		lets_run();
+
+		function lets_run(){
+			box.clearRect(0,0,width,height);			
+
+			for(var i=0; i<numWidth; i++){
+				for(var j=0; j<numHeight; j++){
+					// field[i][j]=newfield[i][j];
+					box.strokeRect(i*10,j*10,10,10);
+					if(field[i][j]==1){
+						box.fillRect(i*10+1,j*10+1,9,9)
+					}
+				}
+			}
+
+			calNewfield();
+
+			allifequal=ifEqual(newfield,field)||ifEqual(newfield,buffer0Field)||ifEqual(newfield,buffer1Field)||ifEqual(newfield,buffer2Field)||ifEqual(newfield,buffer3Field)||ifEqual(newfield,buffer4Field)
+
+			if(allifequal){
+				numHtml++;
+				document.getElementById('num').innerHTML=document.getElementById('num').innerHTML+','+numHtml;
+				document.getElementById('num').innerHTML=document.getElementById('num').innerHTML+','+runsteps;
+				funFirstfield();
+			}
+
+			
+			mkEqual(buffer4Field,buffer3Field);
+			mkEqual(buffer3Field,buffer2Field);
+			mkEqual(buffer2Field,buffer1Field);
+			mkEqual(buffer1Field,buffer0Field);
+			mkEqual(buffer0Field,field);
+			mkEqual(field,newfield);
+
+			runsteps++;
+			document.getElementById('step').innerHTML=runsteps;
+
+			setTimeout(lets_run,0);
+		}
+	</script>
+</body>
+</html>
